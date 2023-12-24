@@ -151,13 +151,13 @@
   "languages": [
     {
       "language": "German",
-      "fluency": "Native speaker"
-      "icon":""
+      "fluency": "Native speaker",
+      "icon": "fa-flag"
     },
     {
       "language": "English",
-      "fluency": "Fluent"
-      "icon":""
+      "fluency": "Fluent",
+      "icon":"fa-flag"
     }
   ],
   "interests": [
