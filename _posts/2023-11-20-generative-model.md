@@ -85,11 +85,11 @@ To evaluate the density of $$\mathbf{x}$$, the mapping function $$f$$ is used to
 Variational Autoencoders (VAEs) are a class of generative model that models the probability distribution $$p_{\theta}(\mathbf{x})$$ by learning a latent representation $$\mathbf{z}$$ of the input data $$\mathbf{x}$$. They consist of two main components: an encoder that maps input data to a latent distribution, and a decoder that reconstructs the data from this latent space. Unlike Normalizing Flow Model, this latent variable $$\mathbf{z}$$ typically has smaller dimension than the input data $$\mathbf{x}$$. VAEs learn to maximize the evidence lower bound (ELBO) of the log probability of the dataset using the following formula:
 
 $$
-\begin{align}
+\begin{align*}
     \log p_{\theta}(\mathbf{x}) &\ge \textbf{ELBO}(\mathbf{x}, \theta, \phi) \\
     &= \mathbb{E}_{q_{\phi}(\mathbf{z} | \mathbf{x})}\left[\log\frac{p_{\theta}(\mathbf{x}, \mathbf{z})}{q_{\phi}(\mathbf{z} | \mathbf{x})}\right] \\
     &= \mathbb{E}_{q_{\phi}(\mathbf{z} | \mathbf{x})}[\log p_{\theta}(\mathbf{x}| \mathbf{z})] - D_{\text{KL}}(q_{\phi}(\mathbf{z} | \mathbf{x}) || p(\mathbf{z}))
-\end{align}
+\end{align*}
 $$
 
 <br>
