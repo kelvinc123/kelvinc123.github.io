@@ -4,7 +4,7 @@ title: "Exploring the Landscape of Generative Models: A Simple Guide"
 date: 2023-11-20 16:50:16
 description: Simple comparison between Autoregressive, Flow, VAEs, GANs, Energy-Based, Score-Based, and Diffusion models.
 tags: VAE Autoregressive Flow Energy-Based Score-Based GAN Diffusion
-categories: generative models
+categories: generative-models
 toc:
   sidebar: left
 ---
