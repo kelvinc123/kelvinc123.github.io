@@ -21,6 +21,7 @@
             - Scalable Distributed System
             - Natural Language Processing
             - Information Retrieval
+            - Database Management Systems
     - title: B.S. in Financial Actuarial Mathematics
       institution: University of California, Los Angeles
       year: 2019
@@ -77,6 +78,8 @@
     - title: Artificial Intelligence Graduate Certificate
       maindescription: Stanford Online
       year: In Progress
+      description:
+        - "Relevant coursework: Deep Learning for Computer Vision, Reinforcement Learning, Deep Generative Models"
     - title: Deep Learning Specialization
       maindescription: Coursera
       year: 2020
