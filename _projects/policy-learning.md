@@ -9,7 +9,7 @@ category: ML
 
 <div class="caption">
 
-    <a href="https://bit.ly/3GN25dq">Presentation Video</a>
+    <a href="https://bit.ly/3GN25dq">Presentation</a>
 
     <a href="https://bit.ly/3NRbc1b">Report</a>
 
