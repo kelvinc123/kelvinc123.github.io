@@ -18,6 +18,7 @@
         - "Cumulative GPA: 3.88/4.00"
         - title: "Relevant coursework:"
           contents:
+            - Data Mining
             - Scalable Distributed System
             - Natural Language Processing
             - Information Retrieval
