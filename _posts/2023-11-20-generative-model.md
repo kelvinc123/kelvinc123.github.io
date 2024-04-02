@@ -110,6 +110,7 @@ In this setup, the $$p(\mathbf{z})$$ is usually a simple distribution like Gauss
 </ul>
 
 #### References
+
 <ul>
   <li><strong>Auto-Encoding Variational Bayes</strong> by Diederik P Kingma and Max Welling. <a href="https://arxiv.org/abs/1312.6114">Link</a>.</li>
   <li><strong>Disentangling Disentanglement in Variational Autoencoders</strong> by Emile Mathieu, Tom Rainforth, N. Siddharth, Yee Whye Teh. <a href="https://arxiv.org/abs/1812.02833">Link</a>.</li>
@@ -125,15 +126,17 @@ $$
 $$
 
 <br>
-In this adversarial setup, $$G$$ and $$D$$ are updated sequentially. The discriminator sharpens its ability to distinguish real from fake, while the generator improves at creating increasingly convincing fake data. To generate new samples, we first sample $$\mathbf{z} \sim p(\mathbf{z})$$ and then feed it into the generator. 
+In this adversarial setup, $$G$$ and $$D$$ are updated sequentially. The discriminator sharpens its ability to distinguish real from fake, while the generator improves at creating increasingly convincing fake data. To generate new samples, we first sample $$\mathbf{z} \sim p(\mathbf{z})$$ and then feed it into the generator.
 
 #### Pros
+
 <ul>
   <li><b>Sample quality</b>: Known for producing high-quality samples as a result of the minimax game</li>
   <li><b>Sampling speed</b>: Fast sampling speed, requiring only a forward pass through the generator</li>
 </ul>
 
 #### Cons
+
 <ul>
   <li><b>Lack of probability estimation</b>: GANs do not focus maximum likelihood estimation, hence are unable to compute probabilities or bounds like VAEs</li>
   <li><b>Mode collapse</b>: Sometimes the generator only produces the limited variety of outputs</li>
@@ -141,6 +144,7 @@ In this adversarial setup, $$G$$ and $$D$$ are updated sequentially. The discrim
 </ul>
 
 #### References
+
 <ul>
   <li><strong>Generative Adversarial Networks</strong> by Ian J. Goodfellow and colleagues. <a href="https://arxiv.org/abs/1406.2661">Link</a>.</li>
   <li><strong>Wasserstein GAN</strong> introducing a new training approach for GANs. <a href="https://arxiv.org/abs/1701.07875">Link</a>.</li>
@@ -171,9 +175,10 @@ $$
 \mathbf{x}^{(k+1)} \leftarrow \mathbf{x}^{(k)} + \frac{\epsilon}{2} \nabla_{\mathbf{x}}\log p_{\theta}(\mathbf{x}^{(k)}) + \epsilon \mathbf{z}^{(k)}
 $$
 
-Where $$\mathbf{z}^{k}$$ is a standard Gaussian random variable. This process converges to the EBM's distribution $$p_{\theta}(\mathbf{x})$$ as $$\epsilon \rightarrow 0$$ and $$k \rightarrow \infty$$. 
+Where $$\mathbf{z}^{k}$$ is a standard Gaussian random variable. This process converges to the EBM's distribution $$p_{\theta}(\mathbf{x})$$ as $$\epsilon \rightarrow 0$$ and $$k \rightarrow \infty$$.
 
 #### Pros
+
 <ul>
   <li><b>Energy function architecture</b>: Flexibility in choosing the energy function</li>
   <li><b>Direct modeling of probability</b>: Capable of modeling the probability distribution directly, without the need for an intermediate latent space</li>
@@ -181,6 +186,7 @@ Where $$\mathbf{z}^{k}$$ is a standard Gaussian random variable. This process co
 </ul>
 
 #### Cons
+
 <ul>
   <li><b>Sampling speed</b>: The need for the MCMC sampling method to converge makes sampling very slow</li>
   <li><b>Training speed</b>: Each training iteration requires sampling, which is very slow</li>
@@ -188,6 +194,7 @@ Where $$\mathbf{z}^{k}$$ is a standard Gaussian random variable. This process co
 </ul>
 
 #### References
+
 <ul>
   <li><strong>How to Train Your Energy-Based Models</strong> by Yang Song, Diederik P. Kingma. <a href="https://arxiv.org/abs/2101.03288">Link</a>.</li>
   <li><strong>Flow Contrastive Estimation of Energy-Based Models</strong> by Ruiqi Gao, Erik Nijkamp, Diederik P. Kingma, Zhen Xu, Andrew M. Dai, Ying Nian Wu. <a href="https://arxiv.org/abs/1912.00589">Link</a>.</li>
@@ -207,7 +214,7 @@ $$
 \mathcal{L}(\theta; \{\sigma_{i}\}_{i=1}^{L}) = \frac{1}{L}\sum_{i=1}^{L}\lambda(\sigma_{i})\mathcal{l}(\theta; \sigma_{i})
 $$
 
-To generate samples from the NCSN, the *Annealed Langevin Dynamics* is employed. The idea is to run Langevin dynamics iterations scaled by the noise level for each noise level. The *Annealed Langevin Dynamics* algorithm can be seen below:
+To generate samples from the NCSN, the _Annealed Langevin Dynamics_ is employed. The idea is to run Langevin dynamics iterations scaled by the noise level for each noise level. The _Annealed Langevin Dynamics_ algorithm can be seen below:
 
 <figure text-align="center" margin="0 auto" display="block">
   <img class="img-fluid rounded z-depth-1" src="{{ site.baseurl }}/assets/img/annealed-ld.jpg" alt="Annealed Langevin Dynamics Algorithm" width="350" data-zoomable>
@@ -215,6 +222,7 @@ To generate samples from the NCSN, the *Annealed Langevin Dynamics* is employed.
 </figure>
 
 #### Pros
+
 <ul>
   <li><b>Sample quality</b>: Produces superior results compared to the other generative models</li>
   <li><b>Flexible model architecture</b>: The score function's architecture is less constrained, allowing for various designs as long as input and output dimensions match</li>
@@ -222,12 +230,14 @@ To generate samples from the NCSN, the *Annealed Langevin Dynamics* is employed.
 </ul>
 
 #### Cons
+
 <ul>
   <li><b>Sampling speed</b>: The reliance on Annealed Langevin Dynamics for sampling can be time-consuming</li>
   <li><b>Lack in probability estimation</b>: The indirect modeling approach complicates exact probability distribution calculations</li>
 </ul>
 
 #### References
+
 <ul>
   <li><strong>Generative Modeling by Estimating Gradients of the Data Distribution</strong> by Yang Song and Stefano Ermon. <a href="https://arxiv.org/abs/1907.05600">Link</a>.</li>
   <li><strong>Improved Techniques for Training Score-Based Generative Models</strong> by Yang Song and Stefano Ermon. <a href="https://arxiv.org/abs/2006.09011">Link</a>.</li>
@@ -240,7 +250,7 @@ To generate samples from the NCSN, the *Annealed Langevin Dynamics* is employed.
 Diffusion Models stand as a pinnacle in the field of generative models. These models operate through a unique process that gradually adds Gaussian noise to the dataset until the data is purely random. This process of adding noises is called the *forward process*. More formally, for a given initial dataset $$\mathbf{x}_{0}$$, Diffusion Models sequentially add a Gaussian noise, adhering to the Markov assumption. This is mathematically represented as:
 
 $$
-  q(x_{0}) = p_{\text{data}}(\mathbf{x}_{0}) 
+  q(x_{0}) = p_{\text{data}}(\mathbf{x}_{0})
 $$
 
 and
@@ -266,7 +276,7 @@ $$
 p_{\theta}(\mathbf{x}_{0:T}) = p(\mathbf{x}_{T}) \prod_{i=1}^{T}p_{\theta}(\mathbf{x}_{t-1} | \mathbf{x}_{t}), \hspace{1.5cm} p_{\theta}(\mathbf{x}_{t-1} | \mathbf{x}_{t}) = \mathcal{N}(\mu_{\theta}(\mathbf{x}_{t}, t), \Sigma_{\theta}(\mathbf{x}_{t}, t))
 $$
 
-This joint distribution signifies the *reverse process*, which attempts to revert the forward process by denoising the noise. 
+This joint distribution signifies the _reverse process_, which attempts to revert the forward process by denoising the noise.
 
 Note that the difference between VAEs and Diffusion Models lies in the distribution of $$q$$. In the Diffusion Model, $$q$$ is fixed and doesn't depend on any trainable parameters. This framework aligns with the training objective of Score-Based Models, essentially focusing on learning the denoising process. The training objective can be simplifies to learning the noise $$\epsilon(\mathbf{x}_{t}, t)$$ at a specific time $$t$$ by minimizing the following simplified loss:
 
@@ -282,17 +292,20 @@ To sample from the Diffusion Models, one begins by sampling random noise from th
 </figure>
 
 #### Pros
+
 <ul>
   <li><b>Sample quality</b>: Excel in producing high-quality and detailed samples</li>
   <li><b>Latent Representation</b>: Able to get a latent representation of the dataset</li>
 </ul>
 
 #### Cons
+
 <ul>
   <li><b>Sample speed</b>: The denoising steps makes sampling very slow</li>
 </ul>
 
 #### References
+
 <ul>
   <li><strong>Denoising Diffusion Probabilistic Models</strong> by Jonathan Ho, Ajay Jain, Pieter Abbeel. <a href="https://arxiv.org/abs/2006.11239">Link</a>.</li>
   <li><strong>Improved Denoising Diffusion Probabilistic Models</strong> by Alex Nichol, Prafulla Dhariwal. <a href="https://arxiv.org/abs/2102.09672">Link</a>.</li>
@@ -303,4 +316,5 @@ To sample from the Diffusion Models, one begins by sampling random noise from th
 </ul>
 
 ## Other Comments
+
 I hope you found this guide informative and useful. If you have any questions, notice any inaccuracies, or simply wish to discuss these fascinating models further, feel free to reach out in the comments or contact me directly. Your feedback and engagement are always appreciated!
