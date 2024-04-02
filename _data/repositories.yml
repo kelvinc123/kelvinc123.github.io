@@ -1,12 +1,12 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - kelvinc123
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - kelvinc123/deep-in-painting
+  - kelvinc123/rag-hotel-data
+  - ricoardiya/soba-up
+  - elsatmr/askcet-beauty2
+  - chuanqichen/CS234_Final_Project
+  - kelvinc123/fine-tuning-stable-diffusion
+  - kelvinc123/Trip-Optimizer
+  - kelvinc123/medium-search-engine
