@@ -43,6 +43,13 @@
   type: time_table
   contents:
     - title: NLP Research Intern
+      location: Oakland, CA
+      maindescription: Chekable
+      year: "2024.2-Present"
+      description:
+        - Collaborated with frontend engineer and UI/UX designer to deliver multiple new features weekly in a fast-paced agile environment
+        - "Tech Stack: Python, LangChain, CrewAI, GCP: (Vertex, Gemini, Cloud Storage), Azure: (Container Apps, Service Bus, OpenAI), Redis, WebSocket, gRPC, Flask, MongoDB"
+    - title: NLP Research Intern
       location: San Jose, CA
       maindescription: Institute for Experiential AI at Northeastern University
       year: "2023.6-2023.8"
@@ -57,6 +64,7 @@
       year: "2022.7-2022.9"
       description:
         - Enhanced the internet security products through data-driven improvements
+        - "Tech Stack: Python, PySpark, SQL, AWS: (S3, Sagemaker), MLflow, Pandas, NumPy, Jupyter"
 
     - title: AI Engineer Intern
       location: Seattle, WA
@@ -64,6 +72,7 @@
       year: "2022.1-2022.6"
       description:
         - Played a key role in engineering an AI-based sensor monitoring system
+        - "Tech Stack: Python, gRPC, RabbitMQ, PyTorch, Bash, OpenCV, HuggingFace, SQL, Airflow, Spark"
 
 - title: Volunteering
   type: time_table
@@ -91,6 +100,8 @@
 - title: Awards
   type: time_table
   contents:
+    - year: 2024
+      maindescription: 2nd Place at Traversaal.ai and Qdrant Hackathon
     - year: 2022
       maindescription: 1st Place at Garuda Hacks 2022
     - year: 2019
