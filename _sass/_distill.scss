@@ -133,6 +133,21 @@ d-article {
   d-footnote {
     scroll-margin-top: 66px;
   }
+
+  // Math rendering in Distill articles
+  d-math {
+    color: var(--global-text-color) !important;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  // Ensure equations are visible in both light and dark modes
+  .katex,
+  .katex-display,
+  .MathJax,
+  .MathJax_Display {
+    color: var(--global-text-color) !important;
+  }
 }
 
 d-appendix {

@@ -155,6 +155,24 @@ ul.task-list input[type="checkbox"] {
   text-align: center;
 }
 
+// MathJax and KaTeX styling
+.MathJax,
+.MathJax_Display,
+mjx-container,
+mjx-container[display="true"],
+.katex,
+.katex-display {
+  color: var(--global-text-color);
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+// Ensure MathJax elements inherit the correct color
+mjx-container svg g {
+  fill: currentColor;
+  stroke: currentColor;
+}
+
 // Caption
 
 .caption {

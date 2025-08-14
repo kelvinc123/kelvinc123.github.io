@@ -117,6 +117,45 @@ html[data-theme="dark"] {
   .repo-img-dark {
     display: block;
   }
+
+  // Math equations in dark mode
+  .MathJax,
+  .MathJax_Display,
+  .MathJax_Preview,
+  .MathJax_SVG,
+  .MathJax_SVG_Display,
+  mjx-container,
+  mjx-container[display="true"],
+  mjx-container svg,
+  mjx-math,
+  .katex,
+  .katex-display,
+  .katex-html {
+    color: var(--global-text-color) !important;
+  }
+
+  // Ensure MathJax SVG paths are visible
+  .MathJax_SVG svg > g,
+  .MathJax_SVG_Display svg > g,
+  mjx-container svg g {
+    fill: var(--global-text-color) !important;
+    stroke: var(--global-text-color) !important;
+  }
+
+  // KaTeX specific
+  .katex .katex-html {
+    color: var(--global-text-color) !important;
+  }
+
+  // Inline math
+  mjx-math {
+    color: var(--global-text-color) !important;
+  }
+
+  // Distill math tags
+  d-math {
+    color: var(--global-text-color) !important;
+  }
 }
 
 html[data-theme-setting="dark"] {
