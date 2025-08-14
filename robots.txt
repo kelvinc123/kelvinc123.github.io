@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: kelvinc123.github.io/sitemap.xml
+Sitemap: https://kelvinc123.github.io/sitemap.xml
