@@ -4,10 +4,11 @@ github_users:
 repo_description_lines_max: 2
 
 github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+  - kelvinc123/deep-in-painting
+  - kelvinc123/rag-hotel-data
+  - ricoardiya/soba-up
+  - elsatmr/askcet-beauty2
+  - chuanqichen/CS234_Final_Project
+  - kelvinc123/fine-tuning-stable-diffusion
+  - kelvinc123/e-commerce_project
+  - kelvinc123/medium-search-engine
